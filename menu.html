@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Eventos</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        form {
+            display: inline-block;
+            text-align: left;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 200px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 100px;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Registro de Eventos</h2>
+    <form id="eventForm">
+        <label for="eventName">Nome do Evento:</label>
+        <input type="text" id="eventName" name="eventName" required>
+
+        <label for="eventDetails">Detalhes do Evento:</label>
+        <textarea id="eventDetails" name="eventDetails" required></textarea>
+
+        <button type="button" onclick="submitEvent()">Registrar Evento</button>
+    </form>
+
+    <script>
+        function submitEvent() {
+            var eventName = document.getElementById('eventName').value;
+            var eventDetails = document.getElementById('eventDetails').value;
+
+            // Aqui você pode adicionar lógica para lidar com os dados do evento (por exemplo, enviar para o servidor, etc.)
+
+            // Exemplo de exibição na console:
+            console.log('Evento Registrado:');
+            console.log('Nome: ' + eventName);
+            console.log('Detalhes: ' + eventDetails);
+        }
+    </script>
+</body>
+
+</html>
